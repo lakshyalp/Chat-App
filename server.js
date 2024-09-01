@@ -16,6 +16,9 @@ const io = socketio(server);
 
 // Set public folder static
 app.use(express.static(__dirname + "/public"));
+app.get('/', (req, res) => {
+    res.send('Running Successfully');
+});
 
 // Run when client connects
 const bot = "chatCord Bot";
